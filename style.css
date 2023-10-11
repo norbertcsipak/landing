@@ -49,7 +49,7 @@ p {
 }
 
 .banner {
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/metcon.jpg');
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/background-pt.avif');
   background-size: cover;
   background-position: center;
   padding: 150px 0;
@@ -117,4 +117,9 @@ p {
 
 .footer p {
   color: white;
+}
+
+.footer a{
+  color: white;
+  text-decoration: none;
 }
