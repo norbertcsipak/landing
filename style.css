@@ -31,8 +31,44 @@
 @media (min-width: 400px) {
   .container {
     width: 200px;
+    font-family: Bebas Neue;
   }
 }
+
+@property --timer {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --temp {
+  syntax: "<number>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --v1 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+@property --v2 {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+#value{
+  transition: --timer 1s;
+  --temp: calc(var(--timer));
+  --v1: max(var(--temp) - 0.5, 0);
+  --v2: max((var(--temp) - var(--v1)) * 100 - 0.5, 0);
+  counter-reset: v1 var(--v1) v2 var(--v2);
+}
+
+#value::before {
+  content: counter(v1) ":" counter(v2, decimal-leading-zero) " am Everyday";
+}
+View Compiled
+
 
 body {
   font-family: Overpass;
@@ -164,4 +200,10 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.js-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
