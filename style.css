@@ -28,6 +28,12 @@
   }
 }
 
+@media (min-width: 400px) {
+  .container {
+    width: 200px;
+  }
+}
+
 body {
   font-family: Overpass;
   margin: 0;
@@ -39,47 +45,53 @@ h1, h2, h3 {
 }
 
 p {
-  color: #404042;
+  color: white;
   opacity: .7;
 }
 
 .container {
-  width: 800px;
   margin: auto;
+  width: 100%;
+  background-color: black;
 }
 
-.banner {
-  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/background-pt.avif');
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  text-align: center;
-}
-
-.banner h1 {
+.container h1 {
   color: white;
-  font-size: 45px;
   margin: 0;
 }
 
-.banner p {
-  color: white;
-  font-size: 24px;
+.free-run {
+  color: red;
+  text-align: center;
+  font-size: 100px;
 }
 
-.button-blue {
-  background-color: #1A48E3;
+.button-white {
+  background-color: black;
   color: white;
-  padding: 16px 48px;
-  border-radius: 4px;
-  display: inline-block;
+  border-radius: 16px;
+  border: 2px solid white;
   text-decoration: none;
   transition: .3s;
+  height: 28px;
+  width: 160px;
+  text-align: center;
+  padding-top: 8px;
+  margin-right: 24px;
 }
 
-.button-blue:hover {
-  background-color: #0D1EC6;
-  color: white;
+.button-white:hover {
+  background-color: white;
+  color: black;
+}
+
+.flex-item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cards {
@@ -109,8 +121,29 @@ p {
   margin-bottom: 0;
 }
 
+.duration {
+  font-size: 80px;
+  color: white;
+  text-align: center;
+}
+.location {
+  font-size: 80px;
+  color: white;
+  text-align: center;
+}
+.time {
+  font-size: 80px;
+  color: white;
+  text-align: center;
+}
+.description {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+}
+
 .footer {
-  background: #404042;
+  background: black;
   text-align: center;
   padding: 24px 0;
 }
@@ -122,4 +155,13 @@ p {
 .footer a{
   color: white;
   text-decoration: none;
+}
+
+.qr-code {
+  font-size: 34px;
+  color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
