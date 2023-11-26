@@ -55,7 +55,7 @@
   inherits: false;
 }
 
-#value{
+.value{
   transition: --timer 1s;
   --temp: calc(var(--timer));
   --v1: max(var(--temp) - 0.5, 0);
@@ -63,8 +63,8 @@
   counter-reset: v1 var(--v1) v2 var(--v2);
 }
 
-#value::before {
-  content: counter(v1) ":" counter(v2, decimal-leading-zero) " am Everyday";
+.value::before {
+  content: counter(v1) ":" counter(v2, decimal-leading-zero) " am Everyday ";
 }
 View Compiled
 
@@ -157,7 +157,7 @@ p {
 }
 
 .cards {
-  padding: 300px 0 300px 0;
+  padding: 200px 0 200px 0;
   display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
@@ -281,4 +281,14 @@ footer {
 footer a {
   color: #fff;
   text-decoration: none;
+}
+
+.owner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.owner h3 {
+  color: #fff;
 }
