@@ -234,6 +234,11 @@ p {
   flex-direction: column;
 }
 
+.qr-code a {
+  text-decoration: none;
+  color: red;
+}
+
 .js-container {
   display: flex;
   justify-content: center;
